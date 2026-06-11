@@ -32,7 +32,7 @@ class WebViewScreen extends StatefulWidget {
 
 class _WebViewScreenState extends State<WebViewScreen> {
   InAppWebViewController? _webViewController;
-  bool _isLoading = true;
+  bool _isLoading = false;
   double _loadingProgress = 0.0;
   bool _shareInProgress = false;
 
@@ -652,7 +652,7 @@ class _WebViewScreenState extends State<WebViewScreen> {
             var isLogin = urlString.includes('/auth/login') || 
                           urlString.includes('/users/login') ||
                           urlString.includes('/auth/signup-verify') ||
-                          urlString.includes('/auth/verify-otp');
+                          urlString.includes('/v1/food/auth/user/verify-otp');
             
             // Call original fetch
             try {
@@ -695,7 +695,7 @@ class _WebViewScreenState extends State<WebViewScreen> {
             if (url && (url.includes('/auth/login') || 
                         url.includes('/users/login') ||
                         url.includes('/auth/signup-verify') ||
-                        url.includes('/auth/verify-otp'))) {
+                        url.includes('/v1/food/auth/user/verify-otp'))) {
                this.addEventListener('load', function() {
                   try {
                     var responseBody = self.responseText;
@@ -1987,34 +1987,34 @@ class _WebViewScreenState extends State<WebViewScreen> {
                       },
                     ),
                     // Loading indicator overlay - only show when loading
-                    if (_isLoading)
-                      Container(
-                        color: Colors.white.withOpacity(0.9),
-                        child: Center(
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              CircularProgressIndicator(
-                                value: _loadingProgress < 1.0 &&
-                                        _loadingProgress > 0
-                                    ? _loadingProgress
-                                    : null,
-                                valueColor: AlwaysStoppedAnimation<Color>(
-                                    AppConfig.primaryColor),
-                              ),
-                              const SizedBox(height: 16),
-                              Text(
-                                'Loading...',
-                                style: TextStyle(
-                                  fontSize: 16,
-                                  color: AppConfig.primaryColor,
-                                  fontWeight: FontWeight.w500,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
+                    // if (_isLoading)
+                    //   Container(
+                    //     color: Colors.white.withOpacity(0.9),
+                    //     child: Center(
+                    //       child: Column(
+                    //         mainAxisAlignment: MainAxisAlignment.center,
+                    //         children: [
+                    //           CircularProgressIndicator(
+                    //             value: _loadingProgress < 1.0 &&
+                    //                     _loadingProgress > 0
+                    //                 ? _loadingProgress
+                    //                 : null,
+                    //             valueColor: AlwaysStoppedAnimation<Color>(
+                    //                 AppConfig.primaryColor),
+                    //           ),
+                    //           const SizedBox(height: 16),
+                    //           Text(
+                    //             'Loading...',
+                    //             style: TextStyle(
+                    //               fontSize: 16,
+                    //               color: AppConfig.primaryColor,
+                    //               fontWeight: FontWeight.w500,
+                    //             ),
+                    //           ),
+                    //         ],
+                    //       ),
+                    //     ),
+                    //   ),
                   ],
                 )
               : OfflineScreen(
