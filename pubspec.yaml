@@ -2,7 +2,8 @@ name: webview_master_app
 description: A feature-rich Flutter WebView application with splash screen, onboarding, and permissions.
 publish_to: "none"
 # version: 1.0.0+1
-version: 1.0.7+7
+# version: 1.0.7+7
+version: 1.0.7+9
 
 environment:
   sdk: ">=3.0.0 <4.0.0"
@@ -54,6 +55,9 @@ dev_dependencies:
   flutter_lints: ^3.0.0
 
   # App Icon Generator
+    # Splash Screen Generator
+  flutter_native_splash: ^2.4.4
+
 
 # Flutter Launcher Icons Configuration
 flutter_launcher_icons:
@@ -62,6 +66,17 @@ flutter_launcher_icons:
   image_path: "assets/images/logo.png"
   adaptive_icon_background: "#ffec3d"
   adaptive_icon_foreground: "assets/images/logo.png"
+
+
+  # Flutter Native Splash Configuration
+flutter_native_splash:
+  color: "#ffffff"
+  image: "assets/images/logo.png"
+  android: true
+  ios: true
+  fullscreen: true
+  ios_content_mode: center
+
 
 flutter:
   uses-material-design: true

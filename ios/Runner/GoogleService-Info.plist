@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyAjxzVGLol8p1y_U0pXv-hkVTwgy5m6Nuo</string>
+	<key>GCM_SENDER_ID</key>
+	<string>215946284862</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.oyechotu.user</string>
+	<key>PROJECT_ID</key>
+	<string>oyechotuu</string>
+	<key>STORAGE_BUCKET</key>
+	<string>oyechotuu.firebasestorage.app</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:215946284862:ios:43ae59afb579886ff4a66f</string>
+	<key>DATABASE_URL</key>
+	<string>https://oyechotuu-default-rtdb.asia-southeast1.firebasedatabase.app</string>
+</dict>
+</plist>

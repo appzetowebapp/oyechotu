@@ -652,7 +652,7 @@ class _WebViewScreenState extends State<WebViewScreen> {
             var isLogin = urlString.includes('/auth/login') || 
                           urlString.includes('/users/login') ||
                           urlString.includes('/auth/signup-verify') ||
-                          urlString.includes('/auth/verify-otp');
+                          urlString.includes('/v1/food/auth/user/verify-otp');
             
             // Call original fetch
             try {
@@ -695,7 +695,7 @@ class _WebViewScreenState extends State<WebViewScreen> {
             if (url && (url.includes('/auth/login') || 
                         url.includes('/users/login') ||
                         url.includes('/auth/signup-verify') ||
-                        url.includes('/auth/verify-otp'))) {
+                        url.includes('/v1/food/auth/user/verify-otp'))) {
                this.addEventListener('load', function() {
                   try {
                     var responseBody = self.responseText;
